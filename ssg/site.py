@@ -30,5 +30,5 @@ class Site:
         parser = self.load_parser(path.suffix())
         if parser:
             parser.parse(path, self.source, self.dest)
-        else
+        else:
             print('Parser extension {} not implemented', path.suffix)
