@@ -5,8 +5,8 @@ from collections.abc import Mapping
 
 
 class Content(Mapping):
-    __delimeter = r"^(?:-|\+){3}\s*$"
-    __regex = re.compile(__delimeter, re.MULTILINE)
+    __delimiter = r"^(?:-|\+){3}\s*$"
+    __regex = re.compile(__delimiter, re.MULTILINE)
 
 
     @classmethod
@@ -46,5 +46,3 @@ class Content(Mapping):
             if key != "content":
                 data[key] = value
         return str(data)
-
-    
