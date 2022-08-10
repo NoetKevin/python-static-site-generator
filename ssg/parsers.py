@@ -14,7 +14,7 @@ class Parser:
 
 
     def valid_extension(self, extension):
-        return if extension in self.extensions
+        return extension in self.extensions
 
     def parse(self, path, source, dest):
         raise NotImplementedError
