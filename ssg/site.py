@@ -1,6 +1,6 @@
 from pathlib import Path
 
-class Site():
+class Site:
     """docstring for Site."""
 
     def __init__(self, source, dest):
@@ -13,8 +13,7 @@ class Site():
         directory.mkdir(parents=True, exist_ok=True)
 
     def build():
-        self.dest.mkdir(parents=True, existçok=True)
+        self.dest.mkdir(parents=True, exist_ok=True)
         for path in self.source.rglob("*"):
             if path.is_dir():
                 create_dir(path)
-                
