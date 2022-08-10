@@ -24,12 +24,12 @@ class Parser:
             return file.read()
 
     def write(self, path, dest, content, ext=".html"):
-        full_path = self.dest / path.with_suffix(ext)
+        full_path = dest / path.with_suffix(ext).name
         with open(full_path, 'w') as file:
             file.write(content)
 
     def copy(self, path, source, dest):
-        shutil.copy2(path, self.dest / path.relative_to(self.source))
+        shutil.copy2(path, dest / path.relative_to(source))
 
 
 class ResourceParser(Parser):
