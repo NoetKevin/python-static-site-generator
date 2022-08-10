@@ -1,12 +1,13 @@
+import shutil
+
 from typing import List
 from pathlib import Path
-import shutil
+
 
 class Parser:
     """docstring for Parser."""
 
-    @List[str]
-    extensions = []
+    extensions: List[str] = []
 
     def __init__(self, arg):
         pass
@@ -32,9 +33,7 @@ class Parser:
 
 
 class ResourceParser(Parser):
-
-    def __init__(self):
-        self.extensions = [".jpg", ".png", ".gif", ".css", ".html"]
+    extensions = [".jpg", ".png", ".gif", ".css", ".html"]
 
     def parse(self, path, source, dest):
         self.copy(path, source, dest)
