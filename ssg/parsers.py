@@ -12,10 +12,6 @@ class Parser:
 
     extensions: List[str] = []
 
-    def __init__(self, arg):
-        pass
-
-
     def valid_extension(self, extension):
         return extension in self.extensions
 
